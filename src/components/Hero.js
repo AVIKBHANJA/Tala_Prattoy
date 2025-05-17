@@ -4,14 +4,14 @@ import rec1 from "./../../public/rec1.jpg";
 import rec2 from "./../../public/rec2.jpg";
 import rec3 from "./../../public/rec3.jpg";
 import rec4 from "./../../public/rec4.jpg";
-import rec5 from "./../../public/rec5.jpg"; 
+import rec5 from "./../../public/rec5.jpg";
 
 export default function Hero() {
   return (
-    <div className="relative bg-black text-white w-full">
+    <div className="relative bg-black text-white w-full h-[799px]">
       <div className="h-screen relative">
         {/* Grid of images */}
-        <div className="grid grid-cols-5 w-full h-full">
+        <div className="grid grid-cols-5 gap-4 w-full h-[399px] ">
           {[
             { src: rec1, alt: "Architectural structure" },
             { src: rec2, alt: "Intricate dark structure" },
@@ -19,15 +19,16 @@ export default function Hero() {
             { src: rec4, alt: "Dome-like structure" },
             { src: rec5, alt: "Ornate structure with lights" },
           ].map((img, index) => (
-            <div key={index} className="col-span-1 overflow-hidden relative">
+            <div
+              key={index}
+              className="col-span-1 overflow-hidden relative h-[399px] m-3"
+            >
               <Image
                 src={img.src}
                 alt={img.alt}
-                className="opacity-80 object-cover gap-10 transition-transform duration-700 hover:scale-110"
-                
-               
-                height={800}
-                
+                className="opacity-80 object-cover transition-transform duration-700 hover:scale-110"
+                fill
+                sizes="(max-width: 768px) 100vw, 20vw"
                 style={{ objectFit: "cover" }}
                 priority={index === 0}
               />
