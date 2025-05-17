@@ -37,7 +37,7 @@ export default function Hero() {
         </div>
 
         {/* Dark overlay - adding proper background color */}
-        <div className="absolute inset-0 bg-black/60 bg-opacity-40"></div>
+        <div className="absolute inset-0 bg-black/30 bg-opacity-40"></div>
 
         {/* Centered text and buttons */}
         <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
