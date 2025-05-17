@@ -23,9 +23,12 @@ export default function Hero() {
               <Image
                 src={img.src}
                 alt={img.alt}
-                className="opacity-80 object-cover transition-transform duration-700 hover:scale-110"
-                fill
-                sizes="20vw"
+                className="opacity-80 object-cover gap-10 transition-transform duration-700 hover:scale-110"
+                
+               
+                height={800}
+                
+                style={{ objectFit: "cover" }}
                 priority={index === 0}
               />
             </div>
